@@ -33,12 +33,12 @@ function validateDescription(description) {
   return schema.validate(description);
 }
 
-const ShowCurrentDate = () => {
-  var date = new Date().getDate();
-  var month = new Date().getMonth() + 1;
-  var year = new Date().getFullYear();
+// const ShowCurrentDate = () => { Used for development.
+//   var date = new Date().getDate();
+//   var month = new Date().getMonth() + 1;
+//   var year = new Date().getFullYear();
 
-  return month + "-" + date + "-" + year + "\n";
-};
+//   return month + "-" + date + "-" + year + "\n";
+// };
 
 module.exports = router;
