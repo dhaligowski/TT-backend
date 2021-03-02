@@ -1,7 +1,6 @@
 {
-    "name": "Ticket Tracker App-- Production",
-    "mail": {
-        "host": "prod-mail-server"
-    }
-
+  "name": "Ticket Tracker App-- Production",
+  "mail": {
+    "host": "prod-mail-server"
+  }
 }
