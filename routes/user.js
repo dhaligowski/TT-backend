@@ -10,13 +10,11 @@ router.get("/:id", auth, (req, res) => {
   const user = existingUsers.getUserById(userId);
   if (!user) return res.status(404).send();
 
-  
-
   res.send({
     id: user.id,
     name: user.name,
     email: user.email,
-    listings: listings.length
+    listings: listings.length,
   });
 });
 
