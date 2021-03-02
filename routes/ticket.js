@@ -2,13 +2,23 @@ const auth = require("../middleware/auth");
 const express = require("express");
 const Joi = require("joi");
 const router = express.Router();
-const tickets = require("../tickets/tickets");
+let tickets = require("../tickets/tickets");
 
 router.get("/:id", (req, res) => {
+  if (req.params.id === "Reset") {
+    while (tickets.length != 1) {
+      tickets.pop();
+    }
+    tickets[0].status = "Open";
+
+    return res.send(tickets);
+  }
+
   if (req.params.id === "Open") {
     const ticketStatus = tickets.filter((c) => c.status === req.params.id);
     return res.send(ticketStatus);
   }
+
   if (req.params.id === "Closed") {
     const ticketStatus = tickets.filter((c) => c.status === req.params.id);
     return res.send(ticketStatus);
