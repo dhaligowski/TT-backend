@@ -34,7 +34,7 @@ router.post("/", async (req, res) => {
     { id: user.id, name: user.name, email: user.email },
     config.get("jwtPrivateKey")
   );
-  console.log("USERS TOKEN", token);
+  //console.log("USERS TOKEN", token);  //Verify JWT token https://jwt.io/
 
   res.header("x-auth-token", token).send({
     id: user.id,

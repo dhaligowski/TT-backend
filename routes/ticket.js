@@ -25,12 +25,11 @@ router.get("/:id", (req, res) => {
   }
 
   let ticket = tickets.find((c) => c.id === parseInt(req.params.id));
-  console.log("params", req.params.id);
-  console.log("ticket", ticket);
+
   if (!ticket)
     return res.status(404).send("The ticket with the given ID was not found.");
   ticket = [ticket];
-  console.log(ticket);
+
   res.send(ticket);
 });
 
