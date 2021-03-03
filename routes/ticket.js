@@ -10,6 +10,7 @@ router.get("/:id", (req, res) => {
       tickets.pop();
     }
     tickets[0].status = "Open";
+    tickets[0].description = "Description Ticket 1";
 
     return res.send(tickets);
   }
