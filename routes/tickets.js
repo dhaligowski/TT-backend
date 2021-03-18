@@ -3,7 +3,6 @@ const express = require("express");
 const Joi = require("joi");
 const router = express.Router();
 const tickets = require("../tickets/tickets");
-const { rearg } = require("lodash");
 
 router.get("/", (req, res) => {
   res.send(tickets);

@@ -11,7 +11,7 @@ const morgan = require("morgan");
 const ticket = require("./routes/ticket");
 const closeTicket = require("./routes/closeTicket");
 
-if (app.get("env") === "development") app.use(cors());
+if (app.get("env") === "development") app.use(cors()); //allows to run in web without cors error
 
 app.use(express.json());
 app.use(helmet());
